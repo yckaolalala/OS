@@ -13,9 +13,9 @@ int count=0;
  int times=total_number_of_points/threads;
  while((times--)>0){
   float x=rand_r(&seed);
-      x = x / (float)RAND_MAX ;
+      x = x / (float)RAND_MAX*2-1 ;
   float y=rand_r(&seed);
-      y = y / (float)RAND_MAX ; 
+      y = y / (float)RAND_MAX*2-1 ; 
  
   if((x*x+y*y)<=1){
    count++;
